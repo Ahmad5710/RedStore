@@ -19,7 +19,7 @@
                     <img src="images/logo.png" alt="" width="125px">
                 </div>
                 <nav>
-                    <ul>
+                    <ul id="menuItems">
                         <li><a href="">Home</a></li>
                         <li><a href="">Products</a></li>
                         <li><a href="">About</a></li>
@@ -28,6 +28,7 @@
                     </ul>
                 </nav>
                 <img src="images/cart.png" alt="" width="25px" height="25px">
+                <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
             </div>
             <div class="row">
                 <div class="col-2">
@@ -352,5 +353,23 @@
         <p class="copyright">Copyright 2022- RedStore </p>
     </div>
 </div>
+
+<!-- ----------------------------script for toggle menu --------------------------------->
+<script>
+    var menuItems=document.getElementById("menuItems");
+    menuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(menuItems.style.maxHeight == "0px"){
+
+            menuItems.style.maxHeight = "200px";
+        }
+        else{
+
+            menuItems.style.maxHeight = "0px"; 
+        }
+    }
+</script>
+
 </body>
 </html>

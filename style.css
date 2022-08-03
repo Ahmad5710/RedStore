@@ -253,11 +253,11 @@ small{
 }
 
 .footer-col-1 ,.footer-col-2, .footer-col-3, .footer-col-4 {
-    min-width: 250px;
+    min-width: 250px; 
     margin-bottom: 20px;
 }
-.footer-col-1 {
-    flex-basis: 30%;
+ .footer-col-1 {
+    flex-basis: 25%;
 }
 .footer-col-2{
     flex: 1;
@@ -270,7 +270,7 @@ small{
 }
 
 .footer-col-3, .footer-col-4 {
-    flex-basis: 12%;
+    flex-basis: 15%;
     text-align: center;
 }
 
@@ -307,13 +307,15 @@ ul{
 
 /* --------media query for menu---------- */
 
-@media only Screen and (max-width: 800px) {
+@media (max-width: 800px) {
     nav ul{
         position: absolute;
         top: 70px;
-       
+        left: 0;
         background: #333;
-        width: 100px;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
     }
 
     nav ul li{
@@ -329,5 +331,16 @@ ul{
     .menu-icon{
         display: block;
         cursor: pointer;
+    }
+}
+
+/* -----------------media query for less then 600px screen-------------  */
+
+@media (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
     }
 }
